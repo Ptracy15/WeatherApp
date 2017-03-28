@@ -5,3 +5,12 @@ body {
 #trademark {
     text-align: center;
 }
+
+#searchForm {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto; 
+    width:250px;
+}

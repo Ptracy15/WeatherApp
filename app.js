@@ -38,12 +38,12 @@ var forecast = new Forecast({
 });
 
 // better weather api
-getWeather.find({search: 'Chicago', degreeType: 'F'}, function(err, results){
-    if(err){
-        console.log(err);
-    }
-    console.log(results[1].forecast);
-});
+// getWeather.find({search: 'Chicago', degreeType: 'F'}, function(err, results){
+//     if(err){
+//         console.log(err);
+//     }
+//     console.log(results[1].forecast);
+// });
 
 // ------------------
 
@@ -57,10 +57,10 @@ app.get("/weatherResults", function(req, res){
     
     getWeather.find({search: searchTerm, degreeType: 'F'}, function(err, results){
         if(err){
-            console.log(err);
+            res.render("home")
         }
         console.log(results);
-        var weatherForecast = results[1].forecast;
+        var weatherForecast = results[0].forecast;
         console.log(weatherForecast);
         res.render("weatherResults", {weatherForecast: weatherForecast, searchTerm: searchTerm});
     });
