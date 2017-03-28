@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="page-header">
+            <h1>Check the weather in your area!</h1>
+        </div>
+        
+        <form action="/weatherResults" method="GET">
+            <div class="input-group">
+                <input type="text" class="form-control" name="search" placeholder="Search Location">
+                <input class="btn btn-primary form-control" type="submit">
+            </div>
+        </form>
+    </div>
+</div>
+
+<% include ./partials/footer %>

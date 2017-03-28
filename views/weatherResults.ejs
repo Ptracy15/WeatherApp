@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Weather in <span style="text-transform: capitalize"><%= searchTerm %></span></h1>
+        <h3>Weekday Forecast</h3>
+        
+        <div class="row">
+            <% for(var i = 0; i < weatherForecast.length; i++){ %>
+                <div class="col-sm-6">
+                    <ul>
+                        <strong><%= weatherForecast[i].day %></strong>
+                        
+                        <li>High: <%= weatherForecast[i].low %></li>
+                        <li>Low: <%= weatherForecast[i].high %></li>
+                        <li>Summary: <%= weatherForecast[i].skytextday %></li>
+                    </ul>
+                </div>
+            <% } %>
+            <!--currentDay.add(1, 'days').calendar();-->
+        </div>
+    </div>
+</div>
+
+
+<script>
+    
+</script>
+
+<% include ./partials/footer %>
